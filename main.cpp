@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
         iteration++;
         incumbent_solution = VRPPDSolution(param.courier_count, param.delivery_count);
         random_greedy_courier_heuristic(param, incumbent_solution);
-        // if(incumbent_solution.is_feasible_solution) stack_all_courier_deliveries(param, incumbent_solution);
+        if(incumbent_solution.is_feasible_solution) stack_all_courier_deliveries(param, incumbent_solution);
         //std::cout << " -> 3" << std::endl;
         if (incumbent_solution.total_delivery_time < best_solution.total_delivery_time) {
             best_solution = incumbent_solution;
